@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## RECIPE FINDER APP ##
 
-## Getting Started
+This is a Next.js search app built with TypeScript that allows users to find recipes based on user-defined filters, including cuisine type and preparation time. The app provides a list of matching recipes, and users can click on a card to view detailed information about a recipe, including ingredients and preparation time.
 
-First, run the development server:
+Note: to be able to navigate to the list of recipes a user must type a dish name or use at least one filter.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# Features #
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Search for recipes by dish name.
+- Filter recipes by cuisine type (Japanese, Chinese, Thai).
+- Filter recipes by maximum preparation time.
+- View detailed recipe information, including the list of ingredients and preparation time.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Dependencies #
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Node v22.14.0
+- NPM 10.9.2
+- TypeScript v5.8.3
+- Next.js v15.3.1
 
-## Learn More
+# Installing #
 
-To learn more about Next.js, take a look at the following resources:
+- Fork and clone the repository
+- Run 'npm install' in your terminal
+- Run 'npm run dev'
+- Open http://localhost:3000 in your browser to view the app
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+If you encounter any issues or need assistance, feel free to reach out to me at valostrovska@gmail.com.
