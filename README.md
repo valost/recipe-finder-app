@@ -11,6 +11,10 @@ Note: to be able to navigate to the list of recipes a user must type a dish name
 - Filter recipes by maximum preparation time.
 - View detailed recipe information, including the list of ingredients and preparation time.
 
+<img width="366" alt="image" src="https://github.com/user-attachments/assets/66102528-1d08-4ed7-a3c4-cad3678698b0" />
+<img width="360" alt="image" src="https://github.com/user-attachments/assets/9fe584aa-3ba9-480d-b9ec-484c55399bbb" />
+<img width="362" alt="image" src="https://github.com/user-attachments/assets/c1d3db7e-5393-4718-8635-0b3fbcf9b50a" />
+
 # Dependencies #
 
 - Node v22.14.0
