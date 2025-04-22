@@ -11,7 +11,7 @@ Note: to be able to navigate to the list of recipes a user must type a dish name
 - Filter recipes by maximum preparation time.
 - View detailed recipe information, including the list of ingredients and preparation time.
 
-<img width="366" alt="image" src="https://github.com/user-attachments/assets/66102528-1d08-4ed7-a3c4-cad3678698b0" /> <img width="360" alt="image" src="https://github.com/user-attachments/assets/9fe584aa-3ba9-480d-b9ec-484c55399bbb" /> <img width="362" alt="image" src="https://github.com/user-attachments/assets/c1d3db7e-5393-4718-8635-0b3fbcf9b50a" />
+<img width="366" alt="image" src="https://github.com/user-attachments/assets/91c82257-254f-4e1c-8f01-17af814653d8" /> <img width="365" alt="image" src="https://github.com/user-attachments/assets/caebb44b-19f9-4ff7-b265-578eb41061f6" /> <img width="366" alt="image" src="https://github.com/user-attachments/assets/1f58cf2e-de4f-4746-bfca-91bff574bb55" />
 
 # Dependencies #
 
