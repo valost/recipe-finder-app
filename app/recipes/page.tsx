@@ -1,40 +1,35 @@
-import { fetchRecipes } from "@/lib/fetchData";
-import { Recipe } from "@/lib/types";
-import Link from "@/node_modules/next/link";
-import { Metadata } from "@/node_modules/next/types";
-import { Suspense } from "react";
+import { fetchRecipes } from '@/lib/fetchData';
+import { Recipe } from '@/lib/types';
+import Link from '@/node_modules/next/link';
+import { Metadata } from '@/node_modules/next/types';
+import { Suspense } from 'react';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Recipes',
 };
 
-export default async function RecipesPage({
-  searchParams,
-}: {
-  searchParams: {
-    query?: string;
-    cuisine?: string;
-    maxReadyTime?: string;
-  };
-}) {
+interface SearchParams {
+  query?: string;
+  cuisine?: string;
+  maxReadyTime?: string;
+}
+
+type PagePropsType = {
+  searchParams: Promise<SearchParams>;
+};
+
+export default async function RecipesPage({ searchParams }: PagePropsType) {
   let recipes: Recipe[] = [];
 
   try {
-    recipes = await fetchRecipes(searchParams);
+    recipes = await fetchRecipes(await searchParams);
   } catch (error) {
-    return (
-      <div className="p-6 text-center text-red-600">
-        Something went wrong while fetching recipes.
-      </div>
-    )
+    return <div className="p-6 text-center text-red-600">Something went wrong while fetching recipes.</div>;
   }
 
   if (!recipes.length) {
-    return (
-      <div className="p-6 text-center text-gray-500">
-        No recipes available. Try different filters.
-      </div>
-    );
+    return <div className="p-6 text-center text-gray-500">No recipes available. Try different filters.</div>;
   }
 
   return (
@@ -50,9 +45,11 @@ export default async function RecipesPage({
                 href={`/recipes/${recipe.id}`}
                 className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden border border-green-100 block"
               >
-                <img 
-                  src={recipe.image} 
-                  alt={recipe.title} 
+                <Image
+                  src={recipe.image}
+                  alt={recipe.title}
+                  width={500}
+                  height={300}
                   className="w-full h-48 object-cover rounded-t-2xl"
                 />
 
@@ -65,5 +62,5 @@ export default async function RecipesPage({
         </Suspense>
       </div>
     </main>
-  )
+  );
 }

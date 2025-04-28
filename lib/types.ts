@@ -2,7 +2,7 @@ export type Recipe = {
   id: number;
   title: string;
   image: string;
-}
+};
 
 export type Ingredient = {
   id: number;

@@ -1,7 +1,7 @@
-'use client'
+'use client';
 
-import { useRouter } from "@/node_modules/next/navigation";
-import { useEffect, useState } from "react";
+import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 const cuisines = ['Chinese', 'Japanese', 'Thai'];
 
@@ -32,15 +32,15 @@ export default function Home() {
     }
 
     router.push(`/recipes?${params.toString()}`);
-  }
+  };
 
   return (
     <main className="min-h-screen flex items-center justify-center bg-green-50 p-6">
       <div className="w-full max-w-md bg-white shadow-xl rounded-3xl p-10 space-y-6 border border-green-100">
         <h1 className="text-2xl font-bold text-center text-black-700">Looking for a new recipe?</h1>
 
-        <input 
-          type="text" 
+        <input
+          type="text"
           className="w-full border border-green-200 rounded-2xl p-3 focus:outline-none focus:ring-2 focus:ring-green-300"
           placeholder="Search for a recipe"
           value={query}
@@ -60,12 +60,10 @@ export default function Home() {
               </option>
             ))}
           </select>
-          <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-green-500">
-            ▼
-          </div>
+          <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-green-500">▼</div>
         </div>
 
-        <input 
+        <input
           type="number"
           className="w-full border border-green-200 rounded-2xl p-3 focus:outline-none focus:ring-2 focus:ring-green-300"
           placeholder="Maximum preparation time (in minutes)"
@@ -76,9 +74,7 @@ export default function Home() {
 
         <button
           className={`w-full py-3 rounded-2xl text-white font-semibold transition ${
-            isButtonEnabled
-              ? 'bg-green-400 hover:bg-green-500'
-              : 'bg-green-200 cursor-not-allowed'
+            isButtonEnabled ? 'bg-green-400 hover:bg-green-500' : 'bg-green-200 cursor-not-allowed'
           }`}
           disabled={!isButtonEnabled}
           onClick={clickNextButton}

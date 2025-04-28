@@ -1,5 +1,5 @@
-import { API_KEY } from "./config"
-import { Recipe } from "./types";
+import { API_KEY } from './config';
+import { Ingredient, Recipe } from './types';
 
 const apiKey = API_KEY as string;
 
@@ -28,7 +28,7 @@ export async function fetchRecipes(searchParams: {
 
   try {
     const response = await fetch(url.toString());
-    
+
     if (!response.ok) {
       throw new Error('Failed to fetch recipes');
     }
@@ -60,7 +60,7 @@ export async function fetchRecipeDetails(recipeId: string) {
       title: data.title,
       image: data.image,
       readyInMinutes: data.readyInMinutes,
-      extendedIngredients: data.extendedIngredients.map((ingredient: any) => ({
+      extendedIngredients: data.extendedIngredients.map((ingredient: Ingredient) => ({
         id: ingredient.id,
         name: ingredient.name,
         image: ingredient.image,
